@@ -1,6 +1,6 @@
 class MediaModel {
   String imageUrl;
-  String title;;
+  String title;
 
   // Constructor
   MediaModel(
