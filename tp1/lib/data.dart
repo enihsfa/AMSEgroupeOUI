@@ -12,12 +12,12 @@ final stars = [
   MediaModel(
       imageUrl:
           'https://hubblesite.org/files/live/sites/hubble/files/home/science/galaxies/_images/STScI-H-galaxies-0639a-2400x1200.jpg',
-      title: 'test'),
-]
+      title: 'test')
+];
 
 final galaxies = [
   MediaModel(
       imageUrl:
           'https://hubblesite.org/files/live/sites/hubble/files/home/science/galaxies/_images/STScI-H-galaxies-0639a-2400x1200.jpg',
-      title: 'test'),
-]
+      title: 'test')
+];
