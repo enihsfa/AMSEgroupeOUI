@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tp1/data.dart';
+import 'package:lib/data.dart';
 
 import 'data.dart';
 
@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Home',
       theme: ThemeData(primaryColor: Colors.red[400]),
-      home: MyStatefulWidget(),
+      home: MyStatefulWidget(key: null,),
     );
   }
 }
 
 class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+  MyStatefulWidget({required Key key}) : super(key: key);
 
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
