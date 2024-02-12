@@ -8,10 +8,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Key myKey = GlobalKey();
     return MaterialApp(
       title: 'Home',
       theme: ThemeData(primaryColor: Colors.red[400]),
-      home: MyStatefulWidget(key: null,),
+      home: MyStatefulWidget(key: myKey,),
     );
   }
 }
@@ -120,7 +121,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 }
 
-Widget voidDescription(List<MediaModel> type, int index) {
+Future<Widget> voidDescription(List<MediaModel> type, int index) async {
   return Scaffold(
     appBar: AppBar(
       automaticallyImplyLeading: true,
