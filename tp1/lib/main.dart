@@ -121,58 +121,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 }
 
-Future<Widget> voidDescription(List<MediaModel> type, int index) async {
-  return Scaffold(
-    appBar: AppBar(
-      automaticallyImplyLeading: true,
-      title: Text('${type[index].title}'),
-      actions: <Widget>[
-        IconButton(
-            icon: Icon(Icons.favorite_border),
-            tooltip: 'Ajouter aux favoris',
-            onPressed: () {})
-      ],
-    ),
-    body: CustomScrollView(
-      physics: const BouncingScrollPhysics(),
-      slivers: <Widget>[
-        SliverAppBar(
-          leading: new Container(),
-          stretch: true,
-          onStretchTrigger: () {
-            return;
-          },
-          expandedHeight: 200.0,
-          flexibleSpace: FlexibleSpaceBar(
-            background: Stack(
-              fit: StackFit.expand,
-              children: [
-                const DecoratedBox(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment(0.0, 0.5),
-                        end: Alignment(0.0, 0.0),
-                        colors: <Color>[
-                          Color(0xFFFFFFFF),
-                          Color(0xFFFFFFFF),
-                        ]),
-                  ),
-                ),
-                Image.network(
-                  type[index].imageUrl,
-                ),
-              ],
-            ),
-          ),
-        ),
-        SliverList(
-          delegate: SliverChildListDelegate(children(type, index)),
-        ),
-      ],
-    ),
-  );
-}
-
 Widget Description(List<MediaModel> type, int index) {
   return Scaffold(
     appBar: AppBar(

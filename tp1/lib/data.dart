@@ -5,7 +5,10 @@ class MediaModel {
   // Constructor
   MediaModel(
       {this.imageUrl,
-      this.title,});
+      this.title,}) {
+          // TODO: implement MediaModel
+          throw UnimplementedError();
+        }
 }
 
 final stars = [
