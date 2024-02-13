@@ -4,8 +4,8 @@ class MediaModel {
 
   // Constructor
   MediaModel(
-      {this.imageUrl,
-      this.title,}) {
+      {required this.imageUrl,
+      required this.title,}) {
           // TODO: implement MediaModel
           throw UnimplementedError();
         }

@@ -139,9 +139,6 @@ Widget Description(List<MediaModel> type, int index) {
         SliverAppBar(
           leading: new Container(),
           stretch: true,
-          onStretchTrigger: () {
-            return;
-          },
           expandedHeight: 200.0,
           flexibleSpace: FlexibleSpaceBar(
             background: Stack(
