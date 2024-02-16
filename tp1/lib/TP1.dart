@@ -230,7 +230,7 @@ class DetailsState extends State<DetailScreen> {
       home: Scaffold(
         body:
         DefaultTextStyle(
-          style: Theme.of(context).textTheme.bodyMedium,
+          style: DefaultTextStyle.of(context).style,
           child: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints viewportConstraints) {
               return SingleChildScrollView(
