@@ -15,7 +15,7 @@ class MediaModel {
 final series = [
   MediaModel(
     imageUrl:
-    'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21-tXMN3Y20PIL9.jpg',
+    'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c028d1a4-b8c6-4392-ae60-e65650e02c43/d5nxa8d-28a56c8c-d858-4fb2-b196-3eb1ba4a165a.png/v1/fit/w_458,h_382,q_70,strp/kjhgfd_by_blackfoxfurry7_d5nxa8d-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzgyIiwicGF0aCI6IlwvZlwvYzAyOGQxYTQtYjhjNi00MzkyLWFlNjAtZTY1NjUwZTAyYzQzXC9kNW54YThkLTI4YTU2YzhjLWQ4NTgtNGZiMi1iMTk2LTNlYjFiYTRhMTY1YS5wbmciLCJ3aWR0aCI6Ijw9NDU4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.70cXVBalBBYneMTwAjwZv2J2sGTW4kO9OygteqAwXTY',
     title: 'One Piece',
     description: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King",
   ),
@@ -108,7 +108,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     getListView(series),
     getListView(bds),
     Text(
-      'Cette application vous est proposée par Vinciane Leclercq et Marie Baey',
+      'TP1 Flutter Daurelle et Soete',
       style: optionStyle ,
       textAlign: TextAlign.justify,
     ),
@@ -129,14 +129,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             IconButton(icon: Icon(Icons.favorite ), onPressed: _pushSaved, ),
           ],
 
-          backgroundColor:Color.fromRGBO(186, 93, 98, 1) /*Color.fromRGBO(30, 47, 74, 0.7)*/
+          backgroundColor:Color.fromRGBO(0, 17, 149, 1) /*Color.fromRGBO(30, 47, 74, 0.7)*/
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor:Color.fromRGBO(186, 93, 98, 1),
+        backgroundColor:Color.fromRGBO(89, 189, 159, 1),
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -145,15 +145,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.screen_lock_landscape),
-            label: 'Animés',
+            label: 'Stars',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            label: 'Mangas',
+            label: 'Galaxies',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.movie_outlined),
-            label: 'A Propos',
+            label: 'About',
           ),
         ],
         currentIndex: _selectedIndex,
@@ -197,9 +197,36 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           return Scaffold(
             appBar: AppBar(
                 title: Text('fav'),
-                backgroundColor:Color.fromRGBO(186, 93, 98, 1)
+                backgroundColor:Color.fromRGBO(0, 17, 149, 1)
             ),
             body: ListView(children: divided),
+            bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor:Color.fromRGBO(89, 189, 159, 1),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.screen_lock_landscape),
+            label: 'Stars',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Galaxies',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.movie_outlined),
+            label: 'About',
+          ),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.white,
+        //unselectedItemColor: Color.fromRGBO(69,89, 146, 1),
+        onTap: _onItemTapped,
+      ),
           );
         }, // ...to here.
       ),
@@ -228,6 +255,16 @@ class DetailsState extends State<DetailScreen> {
     return MaterialApp(
       title: 'Flutter layout demo',
       home: Scaffold(
+        appBar: AppBar(
+        title: Text('Home'),
+        leading: IconButton(
+          icon: Icon(Icons.home),
+          onPressed: () {
+            // Navigate back to the home screen when the home button is pressed
+            Navigator.popUntil(context, ModalRoute.withName('/'));
+          },
+        ),
+      ),
         body:
         DefaultTextStyle(
           style: DefaultTextStyle.of(context).style,
@@ -297,6 +334,7 @@ class DetailsState extends State<DetailScreen> {
             },
           ),
         ),
+        
       ),
     );
   }
@@ -358,11 +396,11 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
     children: <Widget>[
       Material(
         borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
+        color: Color.fromRGBO(0, 17, 149, 1),
         child: InkResponse(
           highlightShape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
+          highlightColor: Color.fromRGBO(0, 12, 103, 1),
           onTap: (){          // a laisser trigger le inkResponse au toucher
           } ,
           child: Align(
@@ -372,7 +410,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
                 text: listAnime.length.toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
-                  TextSpan(text: '\nanimes dans ma liste', style: TextStyle(fontSize: 15, color: Colors.black54)),
+                  TextSpan(text: '\nStars in my list', style: TextStyle(fontSize: 15, color: Colors.black54)),
                 ],
               ),
               textAlign: TextAlign.center,
@@ -384,11 +422,11 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
 
       Material(
         borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
+        color: Color.fromRGBO(0, 17, 149, 1),
         child: InkResponse(
           highlightShape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
+          highlightColor: Color.fromRGBO(0, 12, 103, 1),
           onTap: (){
           } ,
           child: Align(
@@ -398,7 +436,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
                 text: listManga.length.toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
-                  TextSpan(text: '\nmangas dans ma liste', style: TextStyle(fontSize: 15, color: Colors.black54)),
+                  TextSpan(text: '\nGalaxies in my list', style: TextStyle(fontSize: 15, color: Colors.black54)),
                 ],
               ),
               textAlign: TextAlign.center,
@@ -409,11 +447,11 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
       ),
       Material(
         borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
+        color: Color.fromRGBO(0, 17, 149, 1),
         child: InkResponse(
           highlightShape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
+          highlightColor: Color.fromRGBO(0, 12, 103, 1),
           onTap: (){
           } ,
           child: Align(
@@ -423,7 +461,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
                 text: getNumLikedMedia(series).toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
-                  TextSpan(text: '\nanimés favoris', style: TextStyle(fontSize: 15, color: Colors.black54)),
+                  TextSpan(text: '\nFavorite stars', style: TextStyle(fontSize: 15, color: Colors.black54)),
                 ],
               ),
               textAlign: TextAlign.center,
@@ -434,11 +472,11 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
       ),
       Material(
         borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
+        color: Color.fromRGBO(0, 17, 149, 1),
         child: InkResponse(
           highlightShape: BoxShape.rectangle,
           borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
+          highlightColor: Color.fromRGBO(0, 12, 103, 1),
           onTap: (){
           } ,
           child: Align(
@@ -448,57 +486,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
                 text: getNumLikedMedia(bds).toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
-                  TextSpan(text: '\nmangas favoris', style: TextStyle(fontSize: 15, color: Colors.black54)),
-                ],
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          //color: Colors.teal[100],
-        ),
-      ),
-      Material(
-        borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
-        child: InkResponse(
-          highlightShape: BoxShape.rectangle,
-          borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
-          onTap: (){
-          } ,
-          child: Align(
-            alignment: Alignment.center,
-            child: RichText(
-              text: TextSpan(
-                text: 'Tips',
-                style: TextStyle(fontSize: 35, ),
-                children: <TextSpan>[
-                  TextSpan(text: '\nVous pouvez liker les medias dans la fenetre details', style: TextStyle(fontSize: 15, color: Colors.black54)),
-                ],
-              ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          //color: Colors.teal[100],
-        ),
-      ),
-      Material(
-        borderRadius: BorderRadius.all(Radius.circular(40.0)),
-        color: Color.fromRGBO(244, 184, 183, 1),
-        child: InkResponse(
-          highlightShape: BoxShape.rectangle,
-          borderRadius: BorderRadius.all(Radius.circular(40.0)),
-          highlightColor: Color.fromRGBO(179, 54, 135, 0.3),
-          onTap: (){
-          } ,
-          child: Align(
-            alignment: Alignment.center,
-            child: RichText(
-              text: TextSpan(
-                text: 'Tips',
-                style: TextStyle(fontSize: 35, ),
-                children: <TextSpan>[
-                  TextSpan(text: '\n En cliquant sur le coeur vous pourrez consulter vos favoris', style: TextStyle(fontSize: 15, color: Colors.black54)),
+                  TextSpan(text: '\nFavorite galaxies', style: TextStyle(fontSize: 15, color: Colors.black54)),
                 ],
               ),
               textAlign: TextAlign.center,
