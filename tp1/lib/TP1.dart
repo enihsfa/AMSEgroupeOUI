@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+
 ///classe de media model
 class MediaModel {
   String imageUrl;
@@ -12,77 +13,82 @@ class MediaModel {
 }
 
 /// ---------------------initialisation des lists de media------------------------
-final series = [
+final stars = [
   MediaModel(
     imageUrl:
-    'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c028d1a4-b8c6-4392-ae60-e65650e02c43/d5nxa8d-28a56c8c-d858-4fb2-b196-3eb1ba4a165a.png/v1/fit/w_458,h_382,q_70,strp/kjhgfd_by_blackfoxfurry7_d5nxa8d-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzgyIiwicGF0aCI6IlwvZlwvYzAyOGQxYTQtYjhjNi00MzkyLWFlNjAtZTY1NjUwZTAyYzQzXC9kNW54YThkLTI4YTU2YzhjLWQ4NTgtNGZiMi1iMTk2LTNlYjFiYTRhMTY1YS5wbmciLCJ3aWR0aCI6Ijw9NDU4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.70cXVBalBBYneMTwAjwZv2J2sGTW4kO9OygteqAwXTY',
-    title: 'One Piece',
-    description: "Gold Roger was known as the Pirate King, the strongest and most infamous being to have sailed the Grand Line. The capture and death of Roger by the World Government brought a change throughout the world. His last words before his death revealed the location of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece (which promises an unlimited amount of riches and fame), and quite possibly the most coveted of titles for the person who found it, the title of the Pirate King",
-  ),
-  MediaModel(
-    imageUrl:
-    'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx16498-m5ZMNtFioc7j.png',
-    title: 'Shingeki no Kyojin',
-    description: "Several hundred years ago, humans were nearly exterminated by titans. Titans are typically several stories tall, seem to have no intelligence, devour human beings and, worst of all, seem to do it for the pleasure rather than as a food source. A small percentage of humanity survived by walling themselves in a city protected by extremely high walls, even taller than the biggest of titans",
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Alpha%2C_Beta_and_Proxima_Centauri_%281%29.jpg/450px-Alpha%2C_Beta_and_Proxima_Centauri_%281%29.jpg',
+    title: 'Alpha Centauri',
+    description: "Alpha Centauri (α Centauri, Alpha Cen, or α Cen) is a triple star system in the southern constellation of Centaurus. It consists of three stars: Rigil Kentaurus (Alpha Centauri A), Toliman (B) and Proxima Centauri (C).[13] Proxima Centauri is the closest star to the Sun at 4.2465 light-years (1.3020 pc). ",
   ),
   MediaModel(
     imageUrl:
-    'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21507-UaVmcRIUjhUa.jpg',
-    title: 'Mob Psycho 100',
-    description: "The story revolves around Mob, a boy who will explode if his emotional capacity reaches 100%. This boy with psychic powers earned his nickname Mob because he does not stand out among other people. He keeps his psychic powers bottled up so he can live normally, but if his emotional level reaches 100, something will overwhelm his entire body.",
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Lyra_constellation_map.svg/330px-Lyra_constellation_map.svg.png',
+    title: 'Vega',
+    description: "Vega is the brightest star in the northern constellation of Lyra. It has the Bayer designation α Lyrae, which is Latinised to Alpha Lyrae and abbreviated Alpha Lyr or α Lyr. ",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx164-QYmGmG2k09pL.jpg',
-      title: 'Mononoke-hime',
-      description: "A calm village residing in the mountains comes under attack from a demon-possessed boar one day. Ashitaka, a young man and prince of the tribe, engages the creature in an attempt to save his village. During the battle, the boar bites him on the arm, leaving it blackened and cursed. Following his village s traditions, Ashitaka is exiled and becomes a wanderer, looking for a solution to the curse before it engulfs him."
+    imageUrl:
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Orion_constellation_map.svg/420px-Orion_constellation_map.svg.png',
+    title: 'Betelgeuse',
+    description: "Betelgeuse is a red supergiant star of spectral type M1-2 and one of the largest visible to the naked eye. It is usually the tenth-brightest star in the night sky and, after Rigel, the second-brightest in the constellation of Orion.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx4087-TMc9A0GSKiJf.png',
-      title: 'Michiko and Hatchin',
-      description: "After escaping from prison, the criminal Michiko rescues an abused girl known as Hatchin. The two are about as opposite as they come, but their fates become intertwined through the connection of a man from both their pasts. On the run from the police and Hatchin's abusive foster parents, the unlikely duo set out to find this man and ultimately discover their freedom."
+      imageUrl: 'c:\Users\afshi\AppData\Local\Temp\375px-Boötes_IAU.svg.png',
+      title: 'Arcturus',
+      description: "Arcturus is the brightest star in the northern constellation of Boötes. With an apparent visual magnitude of −0.05,[2] it is the fourth-brightest star in the night sky, and the brightest in the northern celestial hemisphere."
   ),
-];
+  MediaModel(
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Canis_Major_constellation_map.svg/375px-Canis_Major_constellation_map.svg.png',
+      title: 'Sirius',
+      description: "Sirius is the brightest star in the night sky. Its name is derived from the Greek word Σείριος (Latin script: Seirios), meaning lit. 'glowing' or 'scorching'. The star is designated α Canis Majoris, Latinized to Alpha Canis Majoris, and abbreviated α CMa or Alpha CMa."
+  ),
+  MediaModel(
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Canis_Major_constellation_map.svg/375px-Canis_Major_constellation_map.svg.png',
+      title: 'Sirius',
+      description: " Altair is the brightest star in the constellation of Aquila and the twelfth-brightest star in the night sky. It has the Bayer designation Alpha Aquilae, which is Latinised from α Aquilae and abbreviated Alpha Aql or α Aql."
+  ),
+ ];
 
-final bds = [
+final galaxies = [
   MediaModel(
-    imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx108556-9LeJqFHRzkVF.png',
-    title: 'SPY×FAMILY',
-    description: "The master spy codenamed <Twilight> has spent his days on undercover missions, all for the dream of a better world. But one day, he receives a particularly difficult new order from command. For his mission, he must form a temporary family and start a new life?! A Spy/Action/Comedy about a one-of-a-kind family!",
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/M31_09-01-2011_%28cropped%29.jpg/435px-M31_09-01-2011_%28cropped%29.jpg',
+    title: 'Adromeda',
+    description: "The Andromeda Galaxy is a barred spiral galaxy and is the nearest major galaxy to the Milky Way. It was originally named the Andromeda Nebula and is cataloged as Messier 31, M31, and NGC 224. ",
   ),
   MediaModel(
-    imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx52986-xufIx5HhD8TW.jpg',
-    title: 'Gray and wonder around her',
-    description: "Even though Ran looks like an adult during her transformation, she doesn’t really know what perils the outside world holds. When she meets rich playboy Otaro Mikado, does she gain a friend or foe?",
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Antennae_Galaxies_reloaded.jpg/435px-Antennae_Galaxies_reloaded.jpg',
+    title: 'Antennae',
+    description: "The Antennae Galaxies (also known as NGC 4038/NGC 4039 or Caldwell 60/Caldwell 61) are a pair of interacting galaxies in the constellation Corvus.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx65573-PwRU3hisff0g.jpg',
-      title: 'Orange',
-      description: "Everyone has regrets in life. So who wouldn’t take the chance to change the past if given the opportunity? When sixteen-year-old Takamiya Naho receives a mysterious letter, claiming to be from her twenty-seven-year-old self, her life is suddenly thrown into flux. The letter tells her that a new transfer student by the name of Naruse Kakeru will be joining her class, and to keep her eye on him. But why? Naho must decide what to make of the letter and its cryptic warning, and what it means not only for her future, but for Kakeru’s as well."
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Messier_81_HST.jpg/450px-Messier_81_HST.jpg',
+      title: 'Messier 81',
+      description: "Messier 81 (also known as NGC 3031 or Bode's Galaxy) is a grand design spiral galaxy about 12 million light-years away in the constellation Ursa Major.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx87423-gPNtu8QbGped.jpg',
-      title: 'The Promised Neverland',
-      description: "Emma, Norman and Ray are the brightest kids at the Grace Field House orphanage. And under the care of the woman they refer to as “Mom,” all the kids have enjoyed a comfortable life. Good food, clean clothes and the perfect environment to learn—what more could an orphan ask for? One day, though, Emma and Norman uncover the dark truth of the outside world they are forbidden from seeing."
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/NGC_4622HSTFull.jpg/435px-NGC_4622HSTFull.jpg',
+      title: 'NGC 4622',
+      description: "NGC 4622 is a face-on unbarred spiral galaxy with a very prominent ring structure located in the constellation Centaurus. The galaxy is a member of the Centaurus Cluster.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx102988-OoVJxQCH6fbR.jpg',
-      title: 'Tokyo Revengers',
-      description: "Watching the news, Takemichi Hanagaki\n learns that his girlfriend from way back in middle school,\n Hinata Tachibana, has died. \nThe only girlfriend he ever had was just \n killed by a villainous group known as the Tokyo Manji Gang."
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/NGC_4826_-_HST.png/450px-NGC_4826_-_HST.png',
+      title: 'Blacke Eyed Galaxie',
+      description: "The Black Eye Galaxy (also called Sleeping Beauty Galaxy or Evil Eye Galaxy and designated Messier 64, M64, or NGC 4826) is a relatively isolated[7] spiral galaxy 17 million light-years away in the mildly northern constellation of Coma Berenices.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx86742-TgJ4ulvfId3y.png',
-      title: 'Children of the Whale',
-      description: "Chakuro is the archivist for the Mud Whale, diligently chronicling the lives and deaths of his people. As one of the short-lived thymia wielders, he knows his time is limited and is determined to leave a better record than his predecessors. But the steady pace of their isolated existence on the Mud Whale is abruptly shattered when a scouting party discovers a mysterious young girl who seems to know more about their home than they do…"
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/NGC_1232.jpg/435px-NGC_1232.jpg',
+      title: 'NGC 1232',
+      description: "NGC 1232, also known as the Eye of God Galaxy is an intermediate spiral galaxy about 60 million light-years away[2] in the constellation Eridanus. It was discovered by German-British astronomer William Herschel on 20 October 1784.",
   ),
   MediaModel(
-      imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/nx107237-97GTv95HyWHv.jpg',
-      title: 'Blue Period',
-      description: "The studious Yatora leaves a dry life of study and good manners behind for a new passion: painting. But untethering yourself from all your past expectations is dangerous as well as thrilling…"
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hubble_Interacting_Galaxy_Arp_148_%282008-04-24%29.jpg/435px-Hubble_Interacting_Galaxy_Arp_148_%282008-04-24%29.jpg',
+      title: "Mayall's object",
+      description: "Mayall's Object (also classified under the Atlas of Peculiar Galaxies as Arp 148) is the result of two colliding galaxies located 500 million light years away within the constellation of Ursa Major. It was discovered by American astronomer Nicholas U. Mayall of the Lick Observatory on 13 March 1940, using the Crossley reflector.",
   ),
   MediaModel(
-    imageUrl: 'https://s4.anilist.co/file/anilistcdn/media/manga/cover/large/bx119425-meONVY52FtVp.png',
-    title: 'One Piece Novel Law',
-    description: "Watching the news, Takemichi Hanagaki learns that his girlfriend from way back in middle school, Hinata Tachibana, has died. The only girlfriend he ever had was just killed by a villainous group known as the Tokyo Manji Gang.\n He lives in a crappy apartment with thin walls, and his six-years-younger boss treats him like an idiot. Plus, he s a complete and total virgin… At the height of his rock-bottom life, he suddenly time-leaps twelve years back to his middle school days!! To save Hinata, and change the life he spent running away, hopeless part-timer Takemichi must aim for the top of Kanto s most sinister delinquent gang!",
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-33a-07.jpg/435px-ESO-VLT-Laser-phot-33a-07.jpg',
+    title: 'Milky Way',
+    description: "The Milky Way[c] is the galaxy that includes the Solar System, with the name describing the galaxy's appearance from Earth: a hazy band of light seen in the night sky formed from stars that cannot be individually distinguished by the naked eye.",
   ),
 ];
 
@@ -104,9 +110,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    homeGridView(series, bds),
-    getListView(series),
-    getListView(bds),
+    homeGridView(stars, galaxies),
+    getListView(stars),
+    getListView(galaxies),
     Text(
       'TP1 Flutter Daurelle et Soete',
       style: optionStyle ,
@@ -126,10 +132,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       appBar: AppBar(
           title: const Text('MEDIATHEQUE', textAlign: TextAlign.center),
           actions: [
-            IconButton(icon: Icon(Icons.favorite ), onPressed: _pushSaved, ),
-          ],
+    IconButton(
+      icon: Icon(
+        getNumLikedMedia(stars) > 0 ? Icons.favorite : Icons.favorite_border,
+      ),
+      onPressed: _pushSaved,
+    ),
+  ],
 
-          backgroundColor:Color.fromRGBO(0, 17, 149, 1) /*Color.fromRGBO(30, 47, 74, 0.7)*/
+          backgroundColor:Color.fromRGBO(0, 17, 149, 1) 
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -144,15 +155,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.screen_lock_landscape),
+            icon: Icon(Icons.star),
             label: 'Stars',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.donut_small),
             label: 'Galaxies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.movie_outlined),
+            icon: Icon(Icons.text_decrease),
             label: 'About',
           ),
         ],
@@ -210,15 +221,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.screen_lock_landscape),
+            icon: Icon(Icons.star),
             label: 'Stars',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.donut_small),
             label: 'Galaxies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.movie_outlined),
+            icon: Icon(Icons.text_decrease),
             label: 'About',
           ),
         ],
@@ -256,9 +267,9 @@ class DetailsState extends State<DetailScreen> {
       title: 'Flutter layout demo',
       home: Scaffold(
         appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Back'),
         leading: IconButton(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.arrow_back),
           onPressed: () {
             // Navigate back to the home screen when the home button is pressed
             Navigator.popUntil(context, ModalRoute.withName('/'));
@@ -337,11 +348,6 @@ class DetailsState extends State<DetailScreen> {
         
       ),
     );
-  }
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(ColorProperty('_aColor', _aColor));
   }
 }
 
@@ -458,7 +464,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
             alignment: Alignment.center,
             child: RichText(
               text: TextSpan(
-                text: getNumLikedMedia(series).toString(),
+                text: getNumLikedMedia(stars).toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
                   TextSpan(text: '\nFavorite stars', style: TextStyle(fontSize: 15, color: Colors.black54)),
@@ -483,7 +489,7 @@ Widget homeGridView( List<MediaModel> listAnime,List<MediaModel> listManga ){
             alignment: Alignment.center,
             child: RichText(
               text: TextSpan(
-                text: getNumLikedMedia(bds).toString(),
+                text: getNumLikedMedia(galaxies).toString(),
                 style: TextStyle(fontSize: 70, ),
                 children: <TextSpan>[
                   TextSpan(text: '\nFavorite galaxies', style: TextStyle(fontSize: 15, color: Colors.black54)),
