@@ -33,7 +33,7 @@ final stars = [
     description: "Betelgeuse is a red supergiant star of spectral type M1-2 and one of the largest visible to the naked eye. It is usually the tenth-brightest star in the night sky and, after Rigel, the second-brightest in the constellation of Orion.",
   ),
   MediaModel(
-      imageUrl: 'c:\Users\afshi\AppData\Local\Temp\375px-Boötes_IAU.svg.png',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bo%C3%B6tes_IAU.svg/375px-Bo%C3%B6tes_IAU.svg.png',
       title: 'Arcturus',
       description: "Arcturus is the brightest star in the northern constellation of Boötes. With an apparent visual magnitude of −0.05,[2] it is the fourth-brightest star in the night sky, and the brightest in the northern celestial hemisphere."
   ),
@@ -114,7 +114,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     getListView(stars),
     getListView(galaxies),
     Text(
-      'TP1 Flutter Daurelle et Soete',
+      'TP1 Flutter Daurelle et Soete\nFavorite button debug',
       style: optionStyle ,
       textAlign: TextAlign.justify,
     ),
@@ -163,7 +163,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Galaxies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.text_decrease),
+            icon: Icon(Icons.text_fields),
             label: 'About',
           ),
         ],
@@ -229,7 +229,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Galaxies',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.text_decrease),
+            icon: Icon(Icons.text_fields),
             label: 'About',
           ),
         ],
@@ -260,6 +260,7 @@ class DetailScreen extends StatefulWidget {
 
 ///le state du stateful Widget au dessus
 class DetailsState extends State<DetailScreen> {
+  // ignore: unused_field
   late Color _aColor;
   @override
   Widget build(BuildContext context) {
