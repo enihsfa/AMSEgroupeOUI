@@ -1,31 +1,56 @@
-//import 'dart:html';
-// ignore_for_file: unnecessary_import
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'TP1.dart';
-//import 'package:flutter/src/painting/border_radius.dart';
+import 'Ex1.dart';
 
+void main() {
+  runApp(MyApp());
+}
 
-void main() => runApp(MyApp());
-
-/// This is the main application widget.
 class MyApp extends StatelessWidget {
-  static const String _title = 'mediatheque';
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
-      //theme: new ThemeData(scaffoldBackgroundColor: Color.fromRGBO(24, 38, 64, 0)),
+      title: 'TP2',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        backgroundColor: Colors.white,
+      ),
       home: MyStatefulWidget(),
-
     );
   }
 }
 
+class MyStatefulWidget extends StatefulWidget {
+  MyStatefulWidget({Key? key}) : super(key: key);
 
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
 
-
-  
+class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('TP2'),
+        ),
+        body: ListView(
+          children: <Widget>[
+            Card(
+              child: ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Exercice1(),
+                    ),
+                  );
+                },
+                title: Text('Exercice 1'),
+                subtitle: Text('Afficher une image'),
+              ),
+            ),
+          ],
+        ));
+  }
+}
