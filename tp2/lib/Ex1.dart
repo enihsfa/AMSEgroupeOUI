@@ -6,6 +6,6 @@ Widget Exercice1() {
       title: Text('Exercice 1'),
     ),
     body:
-        Center(child: Image(image: NetworkImage('https://www.ebaumsworld.com/pictures/34-best-harold-the-creepy-stock-image-guy-memes/84890858/'))),
+        Center(child: Image(image: NetworkImage('https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png'))),
   );
 }
