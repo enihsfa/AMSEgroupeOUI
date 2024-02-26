@@ -7,73 +7,140 @@ class Exercice2 extends StatefulWidget {
 }
 
 class _Exercice2State extends State<Exercice2> {
-  double scaleValue = 1.0;
+  double rotationXValue = 0;
   double rotationYValue = 0;
   double rotationZValue = 0;
+  double scaleValue = 1.0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exercice 2'),
+        title: Text('Exercice 5555555'),
       ),
       body: Column(
         children: <Widget>[
+          
+          SizedBox(height: 20),
           Center(
             child: Transform(
               transform: Matrix4.identity()
                 ..setEntry(3, 2, 0.001) // perspective
+                ..rotateX(rotationXValue * math.pi / 180)
                 ..rotateY(rotationYValue * math.pi / 180)
-                ..rotateZ(rotationZValue * math.pi / 180)
-                ..scale(scaleValue),
+                ..rotateZ(rotationZValue * math.pi / 180),
               alignment: FractionalOffset.center,
               child: Container(
-                height: 450,
-                width: 450,
+                height: 300 * scaleValue,
+                width: 300 * scaleValue,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(color: Colors.blue),
-                child: Image(image: NetworkImage('https://www.ebaumsworld.com/pictures/34-best-harold-the-creepy-stock-image-guy-memes/84890858/')),
+                child: Image(image: NetworkImage('https://picsum.photos/512')),
               ),
             ),
           ),
-          Slider(
-            min: 0.5,
-            max: 2.0,
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            value: scaleValue,
-            onChanged: (double newValue) {
-              setState(() {
-                scaleValue = newValue;
-              });
-            },
+
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Rotation X',
+                  style: TextStyle(fontSize: 16),
+                ),
+                Slider(
+                  min: 0.0,
+                  max: 360.0,
+                  activeColor: Colors.blue,
+                  inactiveColor: Colors.grey,
+                  value: rotationXValue,
+                  label: rotationXValue.round().toString(),
+                  onChanged: (double newXvalue) {
+                    setState(() {
+                      rotationXValue = newXvalue;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
-          Slider(
-            min: 0.0,
-            max: 360.0,
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            value: rotationYValue,
-            label: rotationYValue.round().toString(),
-            onChanged: (double newValue) {
-              setState(() {
-                rotationYValue = newValue;
-              });
-            },
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Rotation Y',
+                  style: TextStyle(fontSize: 16),
+                ),
+                Slider(
+                  min: 0.0,
+                  max: 360.0,
+                  activeColor: Colors.blue,
+                  inactiveColor: Colors.grey,
+                  value: rotationYValue,
+                  label: rotationYValue.round().toString(),
+                  onChanged: (double newYvalue) {
+                    setState(() {
+                      rotationYValue = newYvalue;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
-          Slider(
-            min: 0.0,
-            max: 360.0,
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            value: rotationZValue,
-            label: rotationZValue.round().toString(),
-            onChanged: (double newValue) {
-              setState(() {
-                rotationZValue = newValue;
-              });
-            },
+          /*Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Rotation Z',
+                  style: TextStyle(fontSize: 16),
+                ),
+                Slider(
+                  min: 0.0,
+                  max: 360.0,
+                  activeColor: Colors.blue,
+                  inactiveColor: Colors.grey,
+                  value: rotationZValue,
+                  label: rotationZValue.round().toString(),
+                  onChanged: (double newZvalue) {
+                    setState(() {
+                      rotationZValue = newZvalue;
+                    });
+                  },
+                ),
+              ],
+            ),
+          ),*/
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Echelle',
+                  style: TextStyle(fontSize: 16),
+                ),
+                Slider(
+                  min: 0.1,
+                  max: 2.0,
+                  activeColor: Colors.blue,
+                  inactiveColor: Colors.grey,
+                  value: scaleValue,
+                  onChanged: (double newScaleValue) {
+                    setState(() {
+                      scaleValue = newScaleValue;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
+          
         ],
       ),
     );
