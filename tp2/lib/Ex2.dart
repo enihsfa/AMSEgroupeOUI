@@ -32,7 +32,7 @@ class _Exercice2State extends State<Exercice2> {
                 width: 450,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(color: Colors.blue),
-                child: Image(image: NetworkImage('https://picsum.photos/512')),
+                child: Image(image: NetworkImage('https://www.ebaumsworld.com/pictures/34-best-harold-the-creepy-stock-image-guy-memes/84890858/')),
               ),
             ),
           ),
