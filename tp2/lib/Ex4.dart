@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Tile {
   String imageURL;
-
   Tile({required this.imageURL});
 
   Widget croppedImageTile() {
@@ -12,8 +11,8 @@ class Tile {
         child: Container(
           child: Align(
             alignment: Alignment.centerLeft,
-            widthFactor: 0.3,
-            heightFactor: 0.3,
+            widthFactor: 1/3,
+            heightFactor: 1/3,
             child: Image.network(this.imageURL),
           ),
         ),
@@ -22,8 +21,8 @@ class Tile {
   }
 
   Widget croppedImageTile2(int index, int taille) {
-    int q = index ~/ taille;
-    int r = index % taille;
+    int quo = index ~/ taille;
+    int res = index % taille;
     int n = taille - 1;
 
     return FittedBox(
@@ -31,9 +30,9 @@ class Tile {
       child: ClipRect(
         child: Container(
           child: Align(
-            alignment: FractionalOffset(r / n, q / n),
-            widthFactor: 1 / taille,
-            heightFactor: 1 / taille,
+            alignment: FractionalOffset(res/n, quo/n),
+            widthFactor: 1/taille,
+            heightFactor: 1/taille,
             child: Image.network(this.imageURL),
           ),
         ),
@@ -49,19 +48,23 @@ class DisplayTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Affichage d'une tuile"),
-        centerTitle: true,
+        title: Row( mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+        Text("Exercice 4 : ", textAlign : TextAlign.start),
+        SizedBox(width: 4),
+        Text("Affichage d'une tuile", textAlign : TextAlign.left),
+        ])
       ),
       body: Center(
           child: Column(children: [
         SizedBox(
-            width: 150.0,
-            height: 150.0,
+            width: 200.0,
+            height: 200.0,
             child: Container(
                 margin: EdgeInsets.all(20.0),
                 child: this.createTileWidgetFrom(tile2))),
         Container(
-            height: 200,
+            height: 240,
             child:
                 Image.network('https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', fit: BoxFit.cover))
       ])),
