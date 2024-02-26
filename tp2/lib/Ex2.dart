@@ -16,7 +16,7 @@ class _Exercice2State extends State<Exercice2> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Exercice 5555555'),
+        title: Text('Exercice 2'),
       ),
       body: Column(
         children: <Widget>[
@@ -31,11 +31,17 @@ class _Exercice2State extends State<Exercice2> {
                 ..rotateZ(rotationZValue * math.pi / 180),
               alignment: FractionalOffset.center,
               child: Container(
-                height: 300 * scaleValue,
-                width: 300 * scaleValue,
+                constraints: BoxConstraints(
+                  minWidth: 1,   // Largeur minimale du container
+                  maxWidth: 420,   // Largeur maximale du container
+                  minHeight: 1,   // Hauteur minimale du container
+                  maxHeight: 420,  // Hauteur maximale du container
+                ),
+                height: 250 * scaleValue,
+                width: 250 * scaleValue,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(color: Colors.blue),
-                child: Image(image: NetworkImage('https://picsum.photos/512')),
+                child: Image(image: NetworkImage('https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png')),
               ),
             ),
           ),
