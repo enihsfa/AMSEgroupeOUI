@@ -42,7 +42,7 @@ class Tile {
   }
 }
 
-Tile tile2 = new Tile(imageURL: 'https://picsum.photos/512');
+Tile tile2 = new Tile(imageURL: 'https://www.ebaumsworld.com/pictures/34-best-harold-the-creepy-stock-image-guy-memes/84890858/');
 
 class DisplayTileWidget extends StatelessWidget {
   @override
@@ -63,7 +63,7 @@ class DisplayTileWidget extends StatelessWidget {
         Container(
             height: 200,
             child:
-                Image.network('https://picsum.photos/512', fit: BoxFit.cover))
+                Image.network('https://www.ebaumsworld.com/pictures/34-best-harold-the-creepy-stock-image-guy-memes/84890858/', fit: BoxFit.cover))
       ])),
     );
   }
