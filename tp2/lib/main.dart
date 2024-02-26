@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Ex1.dart';
-/*import 'Ex2.dart';
+import 'Ex2.dart';
 import 'Ex4.dart';
 import 'Ex5.dart';
 import 'Ex6.dart';
-import 'Ex7.dart';*/
+/*import 'Ex7.dart';*/
 
 
 void main() {
@@ -56,7 +56,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text('Afficher une image'),
               ),
             ),
-            /*
+            
+            //Exo2
             Card( 
               child: ListTile(
                 onTap: () {
@@ -71,6 +72,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text('Transformer une image'),
               ),
             ),
+            
+            //Exo4
             Card(
               child: ListTile(
                 onTap: () {
@@ -85,6 +88,9 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Affichage d'une tuile"),
               ),
             ),
+            
+
+            //Exo5
             Card(
               child: ListTile(
                 onTap: () {
@@ -99,6 +105,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Génération du plateau de tuiles"),
               ),
             ),
+            
             Card(
               child: ListTile(
                 onTap: () {
@@ -114,6 +121,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     "Génération du plateau de tuiles à partir d'une image"),
               ),
             ),
+            
             Card(
               child: ListTile(
                 onTap: () {
@@ -128,6 +136,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Configuration du plateau de tuiles"),
               ),
             ),
+            
+            //Exo6
             Card(
               child: ListTile(
                 onTap: () {
@@ -142,6 +152,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Echange de deux tuiles"),
               ),
             ),
+            
             Card(
               child: ListTile(
                 onTap: () {
@@ -156,7 +167,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Echange de deux tuiles dans un plateau"),
               ),
             ),
-            Card(
+            //Exo 7 
+            /*Card(
               child: ListTile(
                 onTap: () {
                   Navigator.push(
@@ -169,8 +181,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 title: Text('Exercice 7'),
                 subtitle: Text("Jeu du Taquin"),
               ),
-            ),*/
+            ),
+            */
           ],
         ));
   }
+}
+
+class GameTaquin {
 }

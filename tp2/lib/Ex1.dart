@@ -6,6 +6,6 @@ Widget Exercice1() {
       title: Text('Exercice 1'),
     ),
     body:
-        Center(child: Image(image: NetworkImage('http://technobrains.io/wp-content/uploads/2021/07/flutter-Featured-Blog-Image2.jpg'))),
+        Center(child: Image(image: NetworkImage('https://fastly.picsum.photos/id/292/512/1024.jpg?hmac=2qQbf1-glgVGIXEONu_EroTadu_fnaVPxE6hgsnOhuo'))),
   );
 }
