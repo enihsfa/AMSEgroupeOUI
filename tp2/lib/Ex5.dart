@@ -22,7 +22,7 @@ class _Exercice5aState extends State<Exercice5a> {
                 alignment: Alignment.center,
                 child: Text("Case ${index}"),
                 decoration: BoxDecoration(
-                    color: Colors.amber[100 * int.parse('${index}')]),
+                    color: Colors.blueAccent[100 * int.parse('${index}')]),
               );
             }));
   }

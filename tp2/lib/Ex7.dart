@@ -34,7 +34,6 @@ class _GameTaquinState extends State<GameTaquin> {
   Function eq = const ListEquality().equals;
   @override
   void initState() {
-    super.initState();
     tiles = initTiles();
     tilesFin = [];
     indexCaseB = 0;
@@ -60,18 +59,21 @@ class _GameTaquinState extends State<GameTaquin> {
             new NewTile(imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', index: index)));
   }
 
-  List<NewTile> whiteCase(List<NewTile> tiles) {
-    math.Random random = new math.Random();
-    int indexB = random.nextInt(size.toInt() * size.toInt());
-    tiles[indexB] = NewTile(
-        imageURL:
-            "https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png",
-        index: indexB);
-    indexCaseB = indexB;
-    indexCaseBIni = indexCaseB;
-    tilesFin = tiles;
-    return tiles;
-  }
+List<NewTile> whiteCase(List<NewTile> tiles) {
+  math.Random random = new math.Random();
+  int indexB = random.nextInt(size.toInt() * size.toInt());
+  
+  // Set the imageURL of the white case to the original image
+  tiles[indexB] = NewTile(
+    imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png',
+    index: indexB,
+  );
+  
+  indexCaseB = indexB;
+  indexCaseBIni = indexCaseB;
+  tilesFin = tiles;
+  return tiles;
+}
 
   List<NewTile> listVictoire() {
     List<NewTile> liste = initTiles();
