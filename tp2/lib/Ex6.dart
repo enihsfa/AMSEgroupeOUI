@@ -86,7 +86,7 @@ class _Exercice6bState extends State<Exercice6b> {
     return (List.generate(
         size.toInt() * size.toInt(),
         (index) =>
-            new NewTile(imageURL: 'https://picsum.photos/512', index: index)));
+            new NewTile(imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', index: index)));
   }
 
   List<Widget> getTileWidgets(List<NewTile> inittiles) {
@@ -204,29 +204,3 @@ class NewTile {
     );
   }
 }
-/*GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: size.toInt(),
-                      crossAxisSpacing: 4,
-                      mainAxisSpacing: 4),
-                  itemCount: math.pow(size.toInt(), 2),
-                  itemBuilder: (BuildContext ctx, index) {
-                    return GestureDetector(
-                      child: Container(
-                        alignment: Alignment.center,
-                        child: Column(children: [
-                          SizedBox(
-                            width: (375 - (size - 1) * 4) / size,
-                            height: (375 - (size - 1) * 4) / size,
-                            child: Container(
-                              margin: EdgeInsets.all(0.0),
-                              child: tuiles[index],
-                            ),
-                          ),
-                        ]),
-                      ),
-                      onTap: () {
-                        swapTiles(tuiles, 0);
-                      },
-                    );
-                  }),*/

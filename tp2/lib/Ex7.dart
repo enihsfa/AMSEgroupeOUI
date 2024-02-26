@@ -57,7 +57,7 @@ class _GameTaquinState extends State<GameTaquin> {
     return (List.generate(
         size.toInt() * size.toInt(),
         (index) =>
-            new NewTile(imageURL: 'https://picsum.photos/512', index: index)));
+            new NewTile(imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', index: index)));
   }
 
   List<NewTile> whiteCase(List<NewTile> tiles) {
@@ -65,7 +65,7 @@ class _GameTaquinState extends State<GameTaquin> {
     int indexB = random.nextInt(size.toInt() * size.toInt());
     tiles[indexB] = NewTile(
         imageURL:
-            "https://www.artoffice-immobilier.com/wp-content/uploads/2019/12/blanc-512x512-1.jpg",
+            "https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png",
         index: indexB);
     indexCaseB = indexB;
     indexCaseBIni = indexCaseB;
@@ -77,7 +77,7 @@ class _GameTaquinState extends State<GameTaquin> {
     List<NewTile> liste = initTiles();
     liste[indexCaseBIni] = NewTile(
         imageURL:
-            "https://www.artoffice-immobilier.com/wp-content/uploads/2019/12/blanc-512x512-1.jpg",
+            "https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png",
         index: indexCaseBIni);
     return liste;
   }
