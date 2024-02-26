@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 import 'Ex4.dart';
 
 class Exercice5a extends StatefulWidget {
