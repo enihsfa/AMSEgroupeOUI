@@ -7,10 +7,9 @@ class Exercice2 extends StatefulWidget {
 }
 
 class _Exercice2State extends State<Exercice2> {
-  double rotationXValue = 0;
-  double rotationYValue = 0; // Nouveau
+  double scaleValue = 1.0;
+  double rotationYValue = 0;
   double rotationZValue = 0;
-  double scaleValue = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,44 +20,42 @@ class _Exercice2State extends State<Exercice2> {
       body: Column(
         children: <Widget>[
           Center(
-            child: Transform.rotate(
-              angle: rotationXValue * math.pi / 160,
-              child: Transform.rotate(
-                angle: rotationYValue * math.pi / 160, // Nouveau
-                child: Transform.rotate(
-                  angle: rotationZValue * math.pi / 160,
-                  child: Container(
-                    height: 450,
-                    width: 450,
-                    clipBehavior: Clip.hardEdge,
-                    decoration: BoxDecoration(color: Colors.blue),
-                    child: Image(image: NetworkImage('https://picsum.photos/512')),
-                  ),
-                ),
+            child: Transform(
+              transform: Matrix4.identity()
+                ..setEntry(3, 2, 0.001) // perspective
+                ..rotateY(rotationYValue * math.pi / 180)
+                ..rotateZ(rotationZValue * math.pi / 180)
+                ..scale(scaleValue),
+              alignment: FractionalOffset.center,
+              child: Container(
+                height: 450,
+                width: 450,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Image(image: NetworkImage('https://picsum.photos/512')),
               ),
             ),
           ),
           Slider(
-            min: 0.0,
-            max: 100.0,
+            min: 0.5,
+            max: 2.0,
             activeColor: Colors.blue,
             inactiveColor: Colors.grey,
-            value: rotationXValue,
-            label: rotationXValue.round().toString(),
-            onChanged: (double newXvalue) {
+            value: scaleValue,
+            onChanged: (double newValue) {
               setState(() {
-                rotationXValue = newXvalue;
+                scaleValue = newValue;
               });
             },
           ),
           Slider(
             min: 0.0,
-            max: 100.0,
+            max: 360.0,
             activeColor: Colors.blue,
             inactiveColor: Colors.grey,
             value: rotationYValue,
             label: rotationYValue.round().toString(),
-            onChanged: (double newYvalue) { // Nouveau
+            onChanged: (double newYvalue) {
               setState(() {
                 rotationYValue = newYvalue;
               });
@@ -66,7 +63,7 @@ class _Exercice2State extends State<Exercice2> {
           ),
           Slider(
             min: 0.0,
-            max: 100.0,
+            max: 360.0,
             activeColor: Colors.blue,
             inactiveColor: Colors.grey,
             value: rotationZValue,
@@ -74,19 +71,6 @@ class _Exercice2State extends State<Exercice2> {
             onChanged: (double newZvalue) {
               setState(() {
                 rotationZValue = newZvalue;
-              });
-            },
-          ),
-          Slider(
-            min: 0.0,
-            max: 100.0,
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            value: scaleValue,
-            label: scaleValue.round().toString(),
-            onChanged: (double newScalevalue) {
-              setState(() {
-                scaleValue = newScalevalue;
               });
             },
           ),
