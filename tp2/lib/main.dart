@@ -4,7 +4,11 @@ import 'Ex2.dart';
 import 'Ex4.dart';
 import 'Ex5.dart';
 import 'Ex6.dart';
+<<<<<<< HEAD
 /*import 'Ex7.dart';*/
+=======
+import 'Ex7.dart';
+>>>>>>> 3619d9fea6e3f225c7dad42ab54b4d809de147d5
 
 
 void main() {
@@ -56,8 +60,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text('Afficher une image'),
               ),
             ),
+<<<<<<< HEAD
             
             //Exo2
+=======
+>>>>>>> 3619d9fea6e3f225c7dad42ab54b4d809de147d5
             Card( 
               child: ListTile(
                 onTap: () {
@@ -182,7 +189,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text("Jeu du Taquin"),
               ),
             ),
+<<<<<<< HEAD
             */
+=======
+>>>>>>> 3619d9fea6e3f225c7dad42ab54b4d809de147d5
           ],
         ));
   }
