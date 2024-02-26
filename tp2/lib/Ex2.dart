@@ -8,10 +8,8 @@ class Exercice2 extends StatefulWidget {
 
 class _Exercice2State extends State<Exercice2> {
   double rotationXValue = 0;
-  double rotationYValue = 0; // Nouveau
   double rotationZValue = 0;
   double scaleValue = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,18 +21,12 @@ class _Exercice2State extends State<Exercice2> {
           Center(
             child: Transform.rotate(
               angle: rotationXValue * math.pi / 160,
-              child: Transform.rotate(
-                angle: rotationYValue * math.pi / 160, // Nouveau
-                child: Transform.rotate(
-                  angle: rotationZValue * math.pi / 160,
-                  child: Container(
-                    height: 450,
-                    width: 450,
-                    clipBehavior: Clip.hardEdge,
-                    decoration: BoxDecoration(color: Colors.blue),
-                    child: Image(image: NetworkImage('https://picsum.photos/512')),
-                  ),
-                ),
+              child: Container(
+                height: 450,
+                width: 450,
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Image(image: NetworkImage('https://picsum.photos/512')),
               ),
             ),
           ),
@@ -48,19 +40,6 @@ class _Exercice2State extends State<Exercice2> {
             onChanged: (double newXvalue) {
               setState(() {
                 rotationXValue = newXvalue;
-              });
-            },
-          ),
-          Slider(
-            min: 0.0,
-            max: 100.0,
-            activeColor: Colors.blue,
-            inactiveColor: Colors.grey,
-            value: rotationYValue,
-            label: rotationYValue.round().toString(),
-            onChanged: (double newYvalue) { // Nouveau
-              setState(() {
-                rotationYValue = newYvalue;
               });
             },
           ),

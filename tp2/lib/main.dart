@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'Ex1.dart';
-/*import 'Ex2.dart';
+import 'Ex2.dart';
 import 'Ex4.dart';
 import 'Ex5.dart';
 import 'Ex6.dart';
-import 'Ex7.dart';*/
+import 'Ex7.dart';
 
 
 void main() {
@@ -56,7 +56,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 subtitle: Text('Afficher une image'),
               ),
             ),
-            /*
             Card( 
               child: ListTile(
                 onTap: () {
@@ -169,7 +168,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 title: Text('Exercice 7'),
                 subtitle: Text("Jeu du Taquin"),
               ),
-            ),*/
+            ),
           ],
         ));
   }
