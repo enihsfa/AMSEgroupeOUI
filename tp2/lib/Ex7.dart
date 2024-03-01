@@ -56,31 +56,30 @@ class _GameTaquinState extends State<GameTaquin> {
     return (List.generate(
         size.toInt() * size.toInt(),
         (index) =>
-            new NewTile(imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', index: index)));
+            new NewTile(imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png', index: index, isWhiteTile: false)));
   }
 
-List<NewTile> whiteCase(List<NewTile> tiles) {
-  math.Random random = new math.Random();
-  int indexB = random.nextInt(size.toInt() * size.toInt());
-  
-  // Set the imageURL of the white case to the original image
-  tiles[indexB] = NewTile(
-    imageURL: 'https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png',
-    index: indexB,
-  );
-  
-  indexCaseB = indexB;
-  indexCaseBIni = indexCaseB;
-  tilesFin = tiles;
-  return tiles;
-}
+  List<NewTile> whiteCase(List<NewTile> tiles) {
+    math.Random random = new math.Random();
+    int indexB = random.nextInt(size.toInt() * size.toInt());
+    String localImagePath = "/ref.png";
+    tiles[indexB] = NewTile(
+      imageURL: localImagePath,
+      index: indexB,
+      isWhiteTile: true);
+    indexCaseB = indexB;
+    indexCaseBIni = indexCaseB;
+    tilesFin = tiles;
+    return tiles;
+  }
+
 
   List<NewTile> listVictoire() {
     List<NewTile> liste = initTiles();
     liste[indexCaseBIni] = NewTile(
         imageURL:
             "https://cdn.ebaumsworld.com/mediaFiles/picture/718392/84890872.png",
-        index: indexCaseBIni);
+        index: indexCaseBIni, isWhiteTile: false);
     return liste;
   }
 
@@ -297,7 +296,7 @@ List<NewTile> whiteCase(List<NewTile> tiles) {
     int taille,
   ) {
     Widget tuile;
-    tuile = plateau.newCroppedImageTile(taille);
+    tuile = plateau.newCroppedImageTile(taille,false);
     if (joue && _playHasBeenPressed) {
       return InkWell(
         child: tuile,
@@ -434,10 +433,20 @@ bool tileEgal(NewTile t1, NewTile t2) {
 class NewTile {
   String imageURL;
   int index;
+  bool isWhiteTile;
 
-  NewTile({required this.imageURL, required this.index});
+  NewTile({required this.imageURL, required this.index, required this.isWhiteTile});
 
-  Widget newCroppedImageTile(int taille) {
+  Widget newCroppedImageTile(int taille, bool isWhiteTile) {
+    // If it's a white tile, show the full image as the white tile
+    if (isWhiteTile) {
+      return Image.network(
+        this.imageURL,
+        fit: BoxFit.cover,
+      );
+    }
+
+    // If it's not a white tile, use the previous logic for cropping
     int q = index ~/ taille;
     int r = index % taille;
     int n = taille - 1;
